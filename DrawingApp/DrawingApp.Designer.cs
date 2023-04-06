@@ -1,6 +1,6 @@
 ﻿namespace DrawingApp
 {
-    partial class Form1
+    partial class Paint
     {
         /// <summary>
         ///  Required designer variable.
@@ -30,12 +30,16 @@
         {
             panel1 = new Panel();
             panel2 = new Panel();
+            pictureBox6 = new PictureBox();
+            pictureBox5 = new PictureBox();
             pictureBox4 = new PictureBox();
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -58,19 +62,41 @@
             // panel2
             // 
             panel2.BackColor = Color.Silver;
+            panel2.Controls.Add(pictureBox6);
+            panel2.Controls.Add(pictureBox5);
             panel2.Controls.Add(pictureBox4);
             panel2.Controls.Add(pictureBox3);
             panel2.Controls.Add(pictureBox2);
             panel2.Controls.Add(pictureBox1);
-            panel2.Location = new Point(580, 12);
+            panel2.Location = new Point(530, 12);
             panel2.Name = "panel2";
-            panel2.Size = new Size(167, 30);
+            panel2.Size = new Size(221, 30);
             panel2.TabIndex = 0;
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.BackColor = Color.Maroon;
+            pictureBox6.Location = new Point(189, 3);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(20, 22);
+            pictureBox6.TabIndex = 5;
+            pictureBox6.TabStop = false;
+            pictureBox6.Click += pictureBox1_Click;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.BackColor = Color.FromArgb(128, 128, 255);
+            pictureBox5.Location = new Point(154, 3);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(20, 22);
+            pictureBox5.TabIndex = 4;
+            pictureBox5.TabStop = false;
+            pictureBox5.Click += pictureBox1_Click;
             // 
             // pictureBox4
             // 
             pictureBox4.BackColor = Color.Olive;
-            pictureBox4.Location = new Point(133, 3);
+            pictureBox4.Location = new Point(118, 3);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(20, 22);
             pictureBox4.TabIndex = 3;
@@ -90,7 +116,7 @@
             // pictureBox2
             // 
             pictureBox2.BackColor = Color.Yellow;
-            pictureBox2.Location = new Point(89, 3);
+            pictureBox2.Location = new Point(83, 3);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(20, 22);
             pictureBox2.TabIndex = 1;
@@ -107,16 +133,18 @@
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
-            // Form1
+            // Paint
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(panel1);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "Paint";
+            Text = "Paint";
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -132,5 +160,7 @@
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
+        private PictureBox pictureBox6;
+        private PictureBox pictureBox5;
     }
 }
