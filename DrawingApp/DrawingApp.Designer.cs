@@ -31,6 +31,7 @@
             panel1 = new Panel();
             panel3 = new Panel();
             panel2 = new Panel();
+            color_picker = new PictureBox();
             pic_color = new Button();
             panel4 = new Panel();
             btn_line = new Button();
@@ -43,6 +44,7 @@
             pic = new PictureBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)color_picker).BeginInit();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pic).BeginInit();
             SuspendLayout();
@@ -63,14 +65,15 @@
             // 
             panel3.BackColor = Color.DimGray;
             panel3.Dock = DockStyle.Bottom;
-            panel3.Location = new Point(0, 397);
+            panel3.Location = new Point(0, 435);
             panel3.Name = "panel3";
-            panel3.Size = new Size(800, 53);
+            panel3.Size = new Size(800, 15);
             panel3.TabIndex = 1;
             // 
             // panel2
             // 
             panel2.BackColor = Color.Gray;
+            panel2.Controls.Add(color_picker);
             panel2.Controls.Add(pic_color);
             panel2.Controls.Add(panel4);
             panel2.Dock = DockStyle.Top;
@@ -79,12 +82,22 @@
             panel2.Size = new Size(800, 100);
             panel2.TabIndex = 0;
             // 
+            // color_picker
+            // 
+            color_picker.Image = Properties.Resources.color_palette;
+            color_picker.Location = new Point(3, 3);
+            color_picker.Name = "color_picker";
+            color_picker.Size = new Size(281, 95);
+            color_picker.SizeMode = PictureBoxSizeMode.StretchImage;
+            color_picker.TabIndex = 9;
+            color_picker.TabStop = false;
+            // 
             // pic_color
             // 
             pic_color.BackColor = Color.White;
-            pic_color.Location = new Point(166, 66);
+            pic_color.Location = new Point(290, 44);
             pic_color.Name = "pic_color";
-            pic_color.Size = new Size(37, 34);
+            pic_color.Size = new Size(24, 27);
             pic_color.TabIndex = 0;
             pic_color.UseVisualStyleBackColor = false;
             // 
@@ -98,9 +111,9 @@
             panel4.Controls.Add(btn_ellipse);
             panel4.Controls.Add(btn_pencil);
             panel4.Controls.Add(btn_eraser);
-            panel4.Location = new Point(263, 12);
+            panel4.Location = new Point(320, 21);
             panel4.Name = "panel4";
-            panel4.Size = new Size(537, 78);
+            panel4.Size = new Size(480, 69);
             panel4.TabIndex = 8;
             // 
             // btn_line
@@ -111,9 +124,9 @@
             btn_line.ForeColor = Color.White;
             btn_line.Image = Properties.Resources.line;
             btn_line.ImageAlign = ContentAlignment.TopCenter;
-            btn_line.Location = new Point(442, 9);
+            btn_line.Location = new Point(408, 4);
             btn_line.Name = "btn_line";
-            btn_line.Size = new Size(69, 60);
+            btn_line.Size = new Size(64, 59);
             btn_line.TabIndex = 7;
             btn_line.Text = "Line";
             btn_line.TextAlign = ContentAlignment.BottomCenter;
@@ -127,9 +140,9 @@
             btn_color.ForeColor = Color.White;
             btn_color.Image = Properties.Resources.color;
             btn_color.ImageAlign = ContentAlignment.TopCenter;
-            btn_color.Location = new Point(21, 10);
+            btn_color.Location = new Point(7, 4);
             btn_color.Name = "btn_color";
-            btn_color.Size = new Size(61, 60);
+            btn_color.Size = new Size(54, 60);
             btn_color.TabIndex = 1;
             btn_color.Text = "Color";
             btn_color.TextAlign = ContentAlignment.BottomCenter;
@@ -143,9 +156,9 @@
             btn_rect.ForeColor = Color.White;
             btn_rect.Image = Properties.Resources.rectangle;
             btn_rect.ImageAlign = ContentAlignment.TopCenter;
-            btn_rect.Location = new Point(367, 9);
+            btn_rect.Location = new Point(333, 3);
             btn_rect.Name = "btn_rect";
-            btn_rect.Size = new Size(69, 60);
+            btn_rect.Size = new Size(69, 59);
             btn_rect.TabIndex = 6;
             btn_rect.Text = "Rectangle";
             btn_rect.TextAlign = ContentAlignment.BottomCenter;
@@ -159,9 +172,9 @@
             btn_fill.ForeColor = Color.White;
             btn_fill.Image = Properties.Resources.bucket;
             btn_fill.ImageAlign = ContentAlignment.TopCenter;
-            btn_fill.Location = new Point(88, 9);
+            btn_fill.Location = new Point(67, 4);
             btn_fill.Name = "btn_fill";
-            btn_fill.Size = new Size(63, 60);
+            btn_fill.Size = new Size(58, 59);
             btn_fill.TabIndex = 2;
             btn_fill.Text = "Fill";
             btn_fill.TextAlign = ContentAlignment.BottomCenter;
@@ -175,9 +188,9 @@
             btn_ellipse.ForeColor = Color.White;
             btn_ellipse.Image = Properties.Resources.circle;
             btn_ellipse.ImageAlign = ContentAlignment.TopCenter;
-            btn_ellipse.Location = new Point(297, 9);
+            btn_ellipse.Location = new Point(263, 4);
             btn_ellipse.Name = "btn_ellipse";
-            btn_ellipse.Size = new Size(64, 60);
+            btn_ellipse.Size = new Size(64, 59);
             btn_ellipse.TabIndex = 5;
             btn_ellipse.Text = "Ellipse";
             btn_ellipse.TextAlign = ContentAlignment.BottomCenter;
@@ -191,9 +204,9 @@
             btn_pencil.ForeColor = Color.White;
             btn_pencil.Image = Properties.Resources.pencil;
             btn_pencil.ImageAlign = ContentAlignment.TopCenter;
-            btn_pencil.Location = new Point(157, 9);
+            btn_pencil.Location = new Point(131, 4);
             btn_pencil.Name = "btn_pencil";
-            btn_pencil.Size = new Size(64, 60);
+            btn_pencil.Size = new Size(61, 59);
             btn_pencil.TabIndex = 3;
             btn_pencil.Text = "Pencil";
             btn_pencil.TextAlign = ContentAlignment.BottomCenter;
@@ -207,9 +220,9 @@
             btn_eraser.ForeColor = Color.White;
             btn_eraser.Image = Properties.Resources.eraser;
             btn_eraser.ImageAlign = ContentAlignment.TopCenter;
-            btn_eraser.Location = new Point(227, 9);
+            btn_eraser.Location = new Point(198, 4);
             btn_eraser.Name = "btn_eraser";
-            btn_eraser.Size = new Size(64, 60);
+            btn_eraser.Size = new Size(59, 59);
             btn_eraser.TabIndex = 4;
             btn_eraser.Text = "Eraser";
             btn_eraser.TextAlign = ContentAlignment.BottomCenter;
@@ -234,6 +247,7 @@
             Text = "Paint";
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)color_picker).EndInit();
             panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pic).EndInit();
             ResumeLayout(false);
@@ -254,5 +268,6 @@
         private Button btn_pencil;
         private Button btn_fill;
         private Panel panel4;
+        private PictureBox color_picker;
     }
 }
