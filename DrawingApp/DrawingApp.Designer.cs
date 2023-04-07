@@ -211,6 +211,7 @@
             btn_pencil.Text = "Pencil";
             btn_pencil.TextAlign = ContentAlignment.BottomCenter;
             btn_pencil.UseVisualStyleBackColor = true;
+            btn_pencil.Click += btn_pencil_Click;
             // 
             // btn_eraser
             // 
@@ -236,6 +237,9 @@
             pic.Size = new Size(800, 450);
             pic.TabIndex = 2;
             pic.TabStop = false;
+            pic.MouseDown += pic_MouseDown;
+            pic.MouseMove += pic_MouseMove;
+            pic.MouseUp += pic_MouseUp;
             // 
             // Paint
             // 
